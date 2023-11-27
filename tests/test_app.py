@@ -12,7 +12,7 @@ Type "help", "copyright", "credits" or "license()" for more information.
 ...     def test_index(self):
 ...         response = self.app.get('/')
 ...         self.assertEqual(response.status_code, 200)
-...         self.assertIn(b'Welcome to the Flask App', response.data)
+...         self.assertIn(b'Welcome to the Course Registration System', response.data)
 ... 
 ... if __name__ == '__main__':
 ...     unittest.main()

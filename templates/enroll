@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beiratkozás</title>
+</head>
+<body>
+    <h1>Beiratkozás egy kurzusra</h1>
+    <form action="/enroll" method="post">
+        <label for="course">Válassz kurzust:</label>
+        <select name="course" id="course">
+            {% for course in courses %}
+                <option value="{{ course.id }}">{{ course.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Beiratkozás">
+    </form>
+</body>
+</html>

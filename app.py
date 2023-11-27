@@ -39,11 +39,11 @@ def courses():
 def enroll():
     if request.method == 'POST':
         course_id = request.form['course']
-        # Itt implementálhatja a beiratkozási logikát...
+        
         return redirect(url_for('index'))
     courses = Course.query.all()
     return render_template('enroll.html', courses=courses)
 
 if __name__ == '__main__':
-    db.create_all()  # Adatbázis táblák létrehozása, ha még nem léteznek
+    db.create_all()  
     app.run(debug=True)
